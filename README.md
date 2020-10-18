@@ -79,5 +79,7 @@ kubectl create -f services/frontend.yaml
 # Generate yaml file
  kubectl get svc nodehelloworld -o yaml
 
+kubectl run -i --tty busybox --image=busybox --restart=Never -- sh
 
-
+# Expose a pod
+kubectl expose pod nodehelloworld --type=LoadBalancer --name=node-helloworld-svc-lb
