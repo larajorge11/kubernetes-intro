@@ -79,7 +79,10 @@ kubectl create -f services/frontend.yaml
 # Generate yaml file
  kubectl get svc nodehelloworld -o yaml
 
+# Connect to the container
 kubectl run -i --tty busybox --image=busybox --restart=Never -- sh
+
+We can do a telnet <ip> <port> to verify connections betweens pods
 
 # Expose a pod
 kubectl expose pod nodehelloworld --type=LoadBalancer --name=node-helloworld-svc-lb
