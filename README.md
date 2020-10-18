@@ -76,7 +76,8 @@ kubectl create -f deployments/frontend.yaml
 kubectl create -f services/frontend.yaml
 
 
-
+# Generate yaml file
+ kubectl get svc nodehelloworld -o yaml
 
 
 
